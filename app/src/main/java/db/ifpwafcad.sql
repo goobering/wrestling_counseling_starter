@@ -10,9 +10,7 @@ CREATE TABLE counselors (
        telephone VARCHAR (25),
        email VARCHAR (50),
        member_since DATE DEFAULT '0000-00-00'
-
 );
-
 
 CREATE TABLE subjects (
 	ID INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -20,7 +18,6 @@ CREATE TABLE subjects (
 	description TEXT,
 	counselor_id INTEGER references Counselor(id)
 );
-
 
 INSERT INTO counselors (first_name, nick_name, last_name, telephone, email, member_since)
        VALUES  	('Jake', 'The Snake', 'Roberts', '412 565-5656', 'snake@ifpwafcad.com', '2003-09-10'),
@@ -32,7 +29,6 @@ INSERT INTO counselors (first_name, nick_name, last_name, telephone, email, memb
                	('Cactus', '', 'Jack', '553 499-8162', 'cactus_jack@ifpwafcad.com', '1999-12-03'),
                	('Dwayne', 'The Rock', 'Johnson', '617 889-5545', 'rock@ifpwafcad.com', '1998-05-07'),
                	('Brutus', '"The Barber"', 'BeefCake', '777 513-3333', 'brutus@ifpwafcad.com', '2002-07-09');
-
 
 INSERT INTO subjects (name, description, counselor_id)
 	VALUES  ('Financial Consultancy', 'Investment advice and financial planning guidance, helping you to maximize your net worth through proper asset allocation. This includes the stocks, bonds, mutual funds, insurance products, and gambling strategies proven to work.', '9'),
