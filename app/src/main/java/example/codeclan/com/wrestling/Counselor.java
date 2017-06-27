@@ -71,7 +71,7 @@ public class Counselor
     {
         Counselor result = new Counselor(0, "", "", "", "", "", "");
 
-        String sql = String.format("SELECT subjects.description, * FROM counselors INNER JOIN subjects ON counselors.id = subjects.counselor_id WHERE subjects.id = '%d';", id);
+        String sql = String.format("SELECT * FROM counselors INNER JOIN subjects ON counselors.id = subjects.counselor_id WHERE subjects.id = '%d';", id);
         ResultSet rs = SqlRunner.executeQuery(sql);
 
         try
